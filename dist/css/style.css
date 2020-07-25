@@ -1,0 +1,90 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Slideshow container */
+.container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.max-height {
+  min-height: 100vh;
+}
+
+.img-container {
+  min-height: 60vh;
+  background: url("/dist/img/pic-1.jpg") center/cover fixed no-repeat;
+  position: relative;
+}
+
+.img-container::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.356);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .img-container {
+    min-height: 70vh;
+  }
+}
+
+.btn-left {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  color: rgba(216, 201, 201, 0.699);
+}
+
+.btn-left:hover {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+.btn-right {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  font-size: 1.2rem;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  color: rgba(216, 201, 201, 0.699);
+}
+
+.btn-right:hover {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+.btn-play,
+.btn-pause {
+  color: rgba(255, 255, 255, 0.856);
+}
+
+.btn-play:hover,
+.btn-pause:hover {
+  background: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.856);
+}
+
+.control {
+  position: absolute;
+  top: 90%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+/* Fading animation */

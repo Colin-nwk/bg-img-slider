@@ -1,0 +1,90 @@
+@import "config";
+@import "resets";
+
+/* Slideshow container */
+.container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.max-height {
+  min-height: 100vh;
+}
+
+.img-container {
+  min-height: 60vh;
+  background: url("/dist/img/pic-1.jpg") center/cover fixed no-repeat;
+  position: relative;
+
+  &::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.356);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .img-container {
+    min-height: 70vh;
+  }
+}
+.btn-left {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  color: rgba(216, 201, 201, 0.699);
+}
+.btn-left:hover {
+  background: transparentize($color: #000000, $amount: 0.6);
+  color: #fff;
+}
+.btn-right {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  font-size: 1.2rem;
+  transform: translate(50%, -50%);
+  color: rgba(216, 201, 201, 0.699);
+}
+.btn-right:hover {
+  background: transparentize($color: #000000, $amount: 0.6);
+  color: #fff;
+}
+
+.btn-play,
+.btn-pause {
+  color: rgba(255, 255, 255, 0.856);
+
+  &:hover {
+    background: transparentize($color: #000000, $amount: 0.6);
+    color: rgba(255, 255, 255, 0.856);
+  }
+}
+.control {
+  position: absolute;
+
+  top: 90%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+/* Fading animation */
+// .fade {
+//   animation-name: fade;
+//   animation-duration: 1.5s;
+// }
+
+// @keyframes fade {
+//   from {
+//     transform: scale(0.8);
+//   }
+//   to {
+//     transform: scale(1);
+//   }
+// }
